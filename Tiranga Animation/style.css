@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-color: #000000;
+}
+.or-color, .wh-color, .gr-color{
+    height: 33.33vh;
+    position: absolute;
+    width: 0;
+    animation: grow 2s forwards;
+
+
+}
+.or-color{
+    background:linear-gradient(to bottom, #ff8011,hsl(28, 100%, 64%)) ;
+    top: 0;
+    left: 0;
+}
+.wh-color{
+    background: #ffffffff;
+    top: 33.33vh;
+    right: 0;
+
+}
+.gr-color{
+    background:linear-gradient(to bottom,#75fc30,#46ed5b) ;
+    bottom: 0;
+    left: 0;
+}
+.chakra{
+    position: fixed;
+    background-color: #ffffffff;
+    left: 50%;
+    top: 50%;
+    mix-blend-mode: multiply;
+    width: 0px;
+    transform: translate(-50%,-50%);
+    animation: spin 3s 1s linear infinite;
+    
+}
+@keyframes grow {
+    100%{
+        width: 100%;
+    }
+}
+@keyframes spin {
+    0%{
+        width: 30vmin;
+    }
+    100%{
+        width: 30vmin;
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+    
+}
